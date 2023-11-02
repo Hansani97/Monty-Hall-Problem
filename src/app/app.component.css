@@ -1,0 +1,72 @@
+.container {
+  margin-top: 50px;
+}
+
+h1 {
+  align-items: center;
+  justify-content: center;
+  color: #d35400;
+  display: flex;
+  font-family: "Baskerville Old Face"
+}
+
+.doors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
+
+.door {
+  width: 150px;
+  height: 200px;
+  margin: 0 5px;
+  border: 4px solid #333;
+  background-color: rgba(206, 214, 224, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 50% 50% 0 0;
+}
+
+.door.selected {
+  background-color: #fdcb6e;
+}
+
+.door.open {
+  cursor: not-allowed;
+  background-color: #ff7675;
+}
+
+.controls {
+  display: flex;
+  margin: 20px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  margin: 20px;
+  width: 120px;
+  font-weight: bold;
+  color: #000!important;
+}
+
+.outcome {
+  font-size: 32px;
+  font-weight: bold;
+  height: 50px;
+  background-color: #B53471;
+}
+
+.outcome p {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: #fff;
+  padding-top: 1px;
+}

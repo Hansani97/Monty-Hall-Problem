@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Monty Hall Problem</h1>
+  <div class="doors">
+    <div *ngFor="let door of doors" class="door"
+         [class.selected]="door.selected"
+         [class.open]="door.open"
+         (click)="selectDoor(door)"
+    >
+      <span *ngIf="door.showEmoji">{{ door.emoji }}</span>
+    </div>
+  </div>
+  <div class="controls">
+    <button class="btn btn-warning" (click)="switchDoors()" [disabled]="!gameStarted || !doorSelected">Switch Door
+    </button>
+    <button class="btn btn-success" (click)="determineOutcome()" [disabled]="!gameStarted || !doorSelected">Result
+    </button>
+    <button class="btn btn-primary" (click)="resetGame()" [disabled]="gameStarted">Reset</button>
+  </div>
+  <div class="outcome" *ngIf="gameResult" >
+    <p>{{ gameResult }}</p>
+  </div>
+</div>
